@@ -2,7 +2,7 @@
 /* SCSS */
 nav {
   font-size: 1em;
-  font-font-weight: bold;
+  font-weight: bold;
   float: left;
 }
 nav ul {
@@ -29,7 +29,7 @@ html {
 
 body {
   font-family: Arial, Helvetica, Sans-Serif;
-  background: #daaa0e;
+  background: #daaa0e !important;
 }
 
 header {
@@ -80,7 +80,7 @@ button, .submit-buttton {
   color: white;
   width: 100px;
   height: 40px;
-  background: #daaa0e;
+  background: #daaa0e !important;
   margin-top: 2em;
 }
 

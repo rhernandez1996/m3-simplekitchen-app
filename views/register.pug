@@ -1,0 +1,26 @@
+doctype html
+head
+  title register
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+  link(rel='StyleSheet' href='css/styles.css' type='text/css')
+  script(src='script.js')
+header
+  nav
+    ul
+      li
+        a(href='/') Home
+      li |
+      li
+        a(href='/register') Register
+main
+  section#intro-text
+    span Simple Kitchen
+    h3
+      | Simple &amp; Comforting 
+      br
+      |             Recipes All Year Round
+  section#intro-register
+  include form.pug
+footer
+  | &copy; Copyright 2022
