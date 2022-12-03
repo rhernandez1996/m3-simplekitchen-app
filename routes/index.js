@@ -34,11 +34,15 @@ router.post('/',
         .isLength({ min: 1 })
         .withMessage('Please enter an email'),
     ],
-    (req, res) => {
+    async (req, res) => {
         //console.log(req.body);
         const errors = validationResult(req);
         if (errors.isEmpty()) {
           const registration = new Registration(req.body);
+          //generate salt to hash password
+          const salt = await bcrypt.genSalt(10);
+          //set user password to hashed password
+          registration.password = await bcrypt.hash(registration.password, salt);
           registration.save()
             .then(() => {res.send('Thank you for your registration!');})
             .catch((err) => {
