@@ -1,35 +1,28 @@
-doctype html
-html
-  head
-    title= `${title}`
-    link(rel='preconnect' href='https://fonts.gstatic.com')
-    //link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
-    link(rel='stylesheet', href='/css/styles.css')
-    script(src='script.js')
-  body
-    header 
-      nav
-        ul
-          li
-            a(href='/') Home
-          li |
-          li
-            a(href='#') Blog
-          li.right-nav 
-            a(href='/register') Register
+extends layout
+
+block content
+    header
+        nav.mainnav
+            ul
+                li
+                    a(href='/') Home
+                li  
+                    ||
+                li
+                    a(href='#') Blog
+        nav.cta
+            ul
+                li
+                    a(href='#') Register
     main
-      section#intro-text
-        span Simple Kitchen
-        h3
-          | Simple &amp; Comforting 
-          br
-          |             Recipes All Year Round
-        p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
-        //- button.submit-buttton View Recipes
-      section.intro-image
-         div.container.listing-reg
-            h1.text-center Thank you for your registration!
-            block content
-  footer
-    | &copy; Copyright 2021
+        section#intro-text
+            span Simple Kitchen
+            h3
+            | Simple &amp; Comforting 
+            br
+            | Recipes All Year Round
+        section#register
+            h2 Thank you for your registration!
+            
+    footer
+        | &copy; Copyright 2021
